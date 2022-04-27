@@ -1,0 +1,66 @@
+:root {
+  --ciano-claro: hsl(174, 77%, 80%); /* slider */
+  --ciano: hsl(174, 86%, 45%); /* bg slider */
+  --vermelho-acinzentado: hsl(14, 92%, 95%); /* bg desconto */
+  --vermelho-claro: hsl(15, 100%, 70%); /* texto desconto */
+  --azul-claro: hsl(226, 100%, 87%); /* texto cta */
+
+  --branco: hsl(0, 0%, 100%); /* bg componente de preço */
+  --azul-muito-claro: hsl(222 87% 97%); /* bg principal */
+  --azul-acinzentado-claro: hsl(224, 65%, 95%); /* slider vazia */
+  --azul-acinzentado-claro-2: hsl(223, 50%, 87%); /* bg toggle */
+  --azul-acinzentado: hsl(225, 20%, 60%); /* texto */
+  --azul-escuro: hsl(227, 35%, 25%); /* texto e bg cta */
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+header {
+  /* background: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat; */
+  background-color: var(--azul-muito-claro);
+  border-bottom-left-radius: 25%;
+  height: 18rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header_texto {
+  padding-bottom: 2rem;
+  height: 40%;
+  background: url(../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+header h1 {
+  color: var(--azul-escuro);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+header p {
+  color: var(--azul-acinzentado);
+  line-height: 25px;
+}
+
+.container {
+  background-color: var(--azul-escuro);
+  box-shadow: 5px 5px 15px 1px #a9a9a9;
+  height: 15rem;
+  margin: 0 1.5rem;
+  border-radius: 8px;
+  position: absolute;
+  top: 15rem;
+}
