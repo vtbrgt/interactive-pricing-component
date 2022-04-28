@@ -57,8 +57,8 @@ header p {
 
 .container {
   background-color: var(--branco);
-  box-shadow: 2px 2px 6px 0px #d7d7d7;
-  height: 15rem;
+  box-shadow: 2px 2px 6px 0px var(--azul-acinzentado-claro-2);
+  height: 18rem;
   width: 87%;
   margin: 0 1.5rem;
   border-radius: 8px;
@@ -71,7 +71,7 @@ header p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* REMOVER */
+  gap: 15px; /* REMOVER */
 }
 
 .container p:first-child {
@@ -80,23 +80,61 @@ header p {
   font-size: 12px;
 }
 
-.slider {
+.range_slider {
   width: 90%;
-  height: 4%;
-  border-radius: 15px;
-  background-color: var(--azul-acinzentado-claro);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.circulo {
-  background-color: var(--ciano);
-  background-image: url(../images/icon-slider.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  border-radius: 50%;
+.range_slider [type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 10px;
+  border-radius: 6px;
+  background: var(--azul-acinzentado-claro);
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.range_slider [type="range"]::-webkit-slider-thumb {
+  appearance: none;
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+  background: var(--ciano);
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.range_slider [type="range"]::-webkit-slider-thumb:hover {
+  background: #23ad9f;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.range_slider [type="range"]::-webkit-slider-thumb:active {
+  background: #23ad9f;
+  box-shadow: 9px 5px 15px -4px var(--ciano);
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.range_slider [type="range"]::-webkit-progress-bar {
+  background: var(--ciano);
+}
+
+.range_value span {
+  color: var(--azul-escuro);
+  font-weight: 800;
+}
+
+.botao {
+  width: 50%;
+}
+
+.botao:hover {
+  cursor: pointer;
 }

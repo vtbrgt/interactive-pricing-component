@@ -18,25 +18,29 @@
   <header>
     <div class="header_texto">
       <h1>Simple, traffic-based pricing</h1>
-    <p>Sign-up for our 30-day trial. <br> No credit card required.</p>
+      <p>Sign-up for our 30-day trial. <br> No credit card required.</p>
     </div>
      
   </header>
    
   <div class="container">
-    <p>Pageviews</p>
-    <div class="slider">
-      <div class="circulo"></div>
-    </div>
-    <p>$ /month</p>
+      <p>Pageviews</p>
+      <div class="range_slider">
+        <input id="myinput" type="range" min="8" max="24" step="4" value="16"> 
+      </div>
+        
+      <div class="range_value">
+        <span></span>
+        <label>/ month</label>
+      </div>
 
-    <p>Monthly Billing <div class="toggle"></div> Yearly Billing 25% discount</p>
+      <p>Monthly Billing <input type="checkbox"> Yearly Billing 25% discount</p>
 
-    <p>Unlimited websites</p>
-    <p>100% data ownership</p>
-    <p>Email reports</p>
+      <p>Unlimited websites</p>
+      <p>100% data ownership</p>
+      <p>Email reports</p>
 
-    <button>Start my trial</button> 
+      <button class="botao">Start my trial</button>     
   </div>
   
   
@@ -44,5 +48,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.-->
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
