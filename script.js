@@ -14,3 +14,10 @@ slider.oninput = function () {
     ((this.value - this.min) / (this.max - this.min)) * 100
   }%, #DEE2E6 100%)`;
 };
+
+let $range = document.querySelector("input");
+let $value = document.querySelector("span");
+
+$range.addEventListener("input", function () {
+  $value.textContent = "$" + this.value + ".00";
+});
