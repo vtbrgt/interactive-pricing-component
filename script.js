@@ -3,6 +3,7 @@ const min = slider.min;
 const max = slider.max;
 const value = slider.value;
 
+/* ADICIONANDO COR AO SLIDER */
 slider.style.background = `linear-gradient(to right, hsl(174, 86%, 45%) 0%, hsl(174, 86%, 45%) ${
   ((value - min) / (max - min)) * 100
 }%, #DEE2E6 ${((value - min) / (max - min)) * 100}%, #DEE2E6 100%)`;
@@ -15,9 +16,12 @@ slider.oninput = function () {
   }%, #DEE2E6 100%)`;
 };
 
+/* VALOR DINÂMICO NO HTML */
 let $range = document.querySelector("input");
-let $value = document.querySelector("span");
+let $value = document.querySelectorAll("span");
 
-$range.addEventListener("input", function () {
-  $value.textContent = "$" + this.value + ".00";
-});
+$value.forEach((span) =>
+  $range.addEventListener("input", function () {
+    span.textContent = "$" + this.value + ".00";
+  })
+);
